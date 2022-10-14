@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "azbykamebeli"
+version = "0.1.0"
+description = "Получение информации с сайта и анализ данных"
+authors = ["ApostolFet <maksim170901@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+bs4 = "^0.0.1"
+aiohttp = "^3.8.3"
+lxml = "^4.9.1"
+
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^5.0.4"
+black = {version = "^22.10.0", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
