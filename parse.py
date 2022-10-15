@@ -22,7 +22,6 @@ async def parse_categoria_products(url_categoria: str) -> None:
             async with session.get(url_page) as resoponse:
                 html_categoria = await resoponse.text()
                 append_products_data(product_data, html_categoria)
-                print(len(product_data))
 
     with open("product_data.json", "w", encoding="utf-8") as file:
         json.dump(product_data, file, indent=4, ensure_ascii=False)
@@ -85,7 +84,7 @@ def append_products_data(product_data: list, html_categoria: str) -> None:
                 "store_price": store_price,
                 "stock": stock,
                 "offer_id": offer_id,
-            }
+            },
         )
 
 
