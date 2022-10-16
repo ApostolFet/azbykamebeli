@@ -130,7 +130,7 @@ dmypy.json
 
 #envirement
 *.sh
-
+*ps1
 
 #PostgresSQL
 pgdata/

@@ -35,9 +35,9 @@ services:
       - "pg_stat_statements.track=all"
     user: "root:root"
     environment:
-      POSTGRES_DB: "azbukamebeli"
-      POSTGRES_USER: "apostol"
-      POSTGRES_PASSWORD: "9Ac26ZrkarG8bL"
+      POSTGRES_DB: "${postgres_db}"
+      POSTGRES_USER: "${pguser}"
+      POSTGRES_PASSWORD: "${pgpassword}"
       PGDATA: "home/var/lib/postgresql/data/pgdata"
     volumes:
       - ../2. Init Database:/docker-entrypoint-initdb.d
